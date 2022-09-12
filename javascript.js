@@ -36,33 +36,12 @@ console.log(resultado1)
 console.log(resultado2)
 console.log(resultado3)
 
-/*
-for (const cat of productos) {
-alert(cat.nombre)    
-}
-*/
-let cliente = Number(prompt(`Seleccione los productos que desea ver:
-1.- Hamburguesas
-2.- Pizzas
-3.- Cócteles`))
 
+let cliente = Number(prompt(`¿Desea ver los productos del menú?
+1.- Si
+2.- No`))
 if (cliente == 1) {
-    prompt(`Tenemos estas variedades disponibles: 
-    ${resultado1}`)}
-   
-/*
-switch (cliente) {
-    case '1':
-        prompt(`Tenemos estas variedades disponibles: `+ resultado)
-        break;
-    case '2':
-        prompt(`Tenemos estas variedades disponibles: `+ resultado2)
-        break;
-    case '3':
-        prompt(`Tenemos estas variedades disponibles: `+ resultado3)
-
-        break;
-    default:
-        break;
-   }
-   */
+    for (const cat of productos) {
+        alert(cat.nombre + " $" + cat.precio)  
+}
+} else alert("Gracias por su visita")
